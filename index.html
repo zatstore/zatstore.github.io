@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zat Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f6fc;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #0077cc;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    h1 { margin: 0; }
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 20px auto;
+    }
+    h2 {
+      color: #444;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+      margin-top: 30px;
+    }
+    .produk {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+    }
+    .produk h3 {
+      margin: 0;
+      color: #0077cc;
+      cursor: pointer;
+    }
+    .produk h3:hover { color: #005999; }
+    .harga-list {
+      display: none;
+      margin-top: 10px;
+      padding-left: 10px;
+    }
+    .harga-list p { margin: 5px 0; }
+    .beli-btn {
+      display: inline-block;
+      margin: 5px 5px 0 0;
+      padding: 8px 12px;
+      background: #0077cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    .beli-btn:hover { background: #005999; }
+  </style>
+  <script>
+    function toggleHarga(id) {
+      let div = document.getElementById(id);
+      if (div.style.display === "none") {
+        div.style.display = "block";
+      } else {
+        div.style.display = "none";
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Zat Store</h1>
+    <p>Premium Apps & Layanan Sosmed</p>
+  </header>
+
+  <div class="container">
+
+    <!-- Streaming Apps -->
+    <h2>🎬 Streaming Apps</h2>
+    <div class="produk">
+      <h3 onclick="toggleHarga('netflixHarga')">Netflix ⬇️</h3>
+      <div id="netflixHarga" class="harga-list">
+        <p>1 Bulan: Rp35.000</p>
+        <p>2 Bulan: Rp70.000</p>
+        <p>3 Bulan: Rp105.000</p>
+        <a class="beli-btn" href="https://wa.me/6281234567890?text=Beli%20Netflix%201%20Bulan" target="_blank">Beli 1 Bulan</a>
+        <a class="beli-btn" href="https://wa.me/6281234567890?text=Beli%20Netflix%203%20Bulan" target="_blank">Beli 2 Bulan</a>
+        <a class="beli-btn" href="https://wa.me/6281234567890?text=Beli%20Netflix%206%20Bulan" target="_blank">Beli 3 Bulan</a>
+      </div>
+    </div>
+
+    <div class="produk">
+      <h3 onclick="toggleHarga('viuHarga')">Viu ⬇️</h3>
+      <div id="viuHarga" class="harga-list">
+        <p>1 Bulan: Rp10.000</p>
+        <p>3 Bulan: Rp20.000</p>
+        <a class="beli-btn" href="https://wa.me/6281234567890?text=Beli%20Viu%201%20Bulan" target="_blank">Beli 1 Bulan</a>
+        <a class="beli-btn" href="https://wa.me/6281234567890?text=Beli%20Viu%203%20Bulan" target="_blank">Beli 3 Bulan</a>
+      </div>
+    </div>
+
+    <div class="produk">
+      <h3 onclick="toggleHarga('wetvHarga')">WeTV ⬇️</h3>
+      <div id="wetvHarga" class="harga-list">
+        <p>1 Bulan: Rp17.000</p>
+        <p>2 Bulan: Rp30.000</p>
+        <a class="beli-btn" href="https://wa.me/6281234567890?text=Beli%20WeTV%201%20Bulan" target="_blank">Beli 1 Bulan</a>
+        <a class="beli-btn" href="https://wa.me/6281234567890?text=Beli%20WeTV%203%20Bulan" target="_blank">Beli 2 Bulan</a>
+      </div>
+    </div>
+
+    <div class="produk">
+  <h3 onclick="toggleHarga('disneyHarga')">Disney+ Hotstar ⬇️</h3>
+  <div id="disneyHarga" class="harga-list">
+    <p>1 Bulan: Rp40.000</p>
+    <a class="beli-btn" href="https://wa.me/6281234567890?text=Beli%20Disney+%201%20Bulan" target="_blank">Beli 1 Bulan</a>
+  </div>
+</div>
+
+
+    <!-- Editing Apps -->
+    <h2>🎨 Editing Apps</h2>
+    <div class="produk">
+      <h3 onclick="toggleHarga('canvaHarga')">Canva Pro ⬇️</h3>
+      <div id="canvaHarga" class="harga-list">
+        <p>1 Bulan: Rp40.000</p>
+        <a class="beli-btn" href="https://wa.me/6281234567890?text=Beli%20Canva%20Pro%201%20Bulan" target="_blank">Beli 1 Bulan</a>
+      </div>
+    </div>
+
+    <div class="produk">
+      <h3 onclick="toggleHarga('capcutHarga')">CapCut Pro ⬇️</h3>
+      <div id="capcutHarga" class="harga-list">
+        <p>1 Bulan: Rp35.000</p>
+        <a class="beli-btn" href="https://wa.me/6281234567890?text=Beli%20CapCut%20Pro%201%20Bulan" target="_blank">Beli 1 Bulan</a>
+      </div>
+    </div>
+
+    <!-- Other Apps -->
+    <h2>📱 Other Premium Apps</h2>
+    <div class="produk">
+      <h3 onclick="toggleHarga('chatgptHarga')">ChatGPT Plus ⬇️</h3>
+      <div id="chatgptHarga" class="harga-list">
+        <p>1 Bulan: Rp150.000</p>
+        <a class="beli-btn" href="https://wa.me/6281234567890?text=Beli%20ChatGPT%20Plus%201%20Bulan" target="_blank">Beli 1 Bulan</a>
+      </div>
+    </div>
+
+    <div class="produk">
+      <h3 onclick="toggleHarga('spotifyHarga')">Spotify Premium ⬇️</h3>
+      <div id="spotifyHarga" class="harga-list">
+        <p>1 Bulan: Rp25.000</p>
+        <p>3 Bulan: Rp70.000</p>
+        <a class="beli-btn" href="https://wa.me/6281234567890?text=Beli%20Spotify%201%20Bulan" target="_blank">Beli 1 Bulan</a>
+        <a class="beli-btn" href="https://wa.me/6281234567890?text=Beli%20Spotify%203%20Bulan" target="_blank">Beli 3 Bulan</a>
+      </div>
+    </div>
+
+  <!-- Kategori Suntik Sosmed -->
+<div class="kategori">
+   <center><h1>SUNTIK SOSMED</h1></center>
+  <h2>instagram</h2>
+
+<!-- Instagram Followers -->
+<div class="produk">
+  <div>
+    <h3 onclick="toggleHarga('igFollowers')">Instagram Followers ⬇️</h3>
+    <div id="igFollowers" class="harga-list">
+      <p>100 Followers : Rp10.000   <a class="beli-btn" href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20beli%20100%20Followers%20Instagram" target="_blank">Beli</a>
+      </p>
+      <p>200 Followers : Rp18.000   <a class="beli-btn" href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20beli%20100%20Followers%20Instagram" target="_blank">Beli</a>
+      </p>
+      <p>300 Followers : Rp25.000   <a class="beli-btn" href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20beli%20100%20Followers%20Instagram" target="_blank">Beli</a>
+      </p>
+      <p>500 Followers : Rp400.000<a class="beli-btn" href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20beli%20100%20Followers%20Instagram" target="_blank">Beli</a>
+      </p>
+      <p>1000 Followers : Rp75.000<a class="beli-btn" href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20beli%20100%20Followers%20Instagram" target="_blank">Beli</a>
+      </p>
+      <p>2000 Followers : Rp140.000<a class="beli-btn" href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20beli%20100%20Followers%20Instagram" target="_blank">Beli</a>
+      </p>
+      <p>3000 Followers : Rp200.000<a class="beli-btn" href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20beli%20100%20Followers%20Instagram" target="_blank">Beli</a>
+      </p>
+      <p>5000 Followers : Rp320.000<a class="beli-btn" href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20beli%20100%20Followers%20Instagram" target="_blank">Beli</a>
+      </p>
+      <p>7000 Followers : Rp430.000<a class="beli-btn" href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20beli%20100%20Followers%20Instagram" target="_blank">Beli</a>
+      </p>
+      <p>10000 Followers : Rp600.000<a class="beli-btn" href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20beli%20100%20Followers%20Instagram" target="_blank">Beli</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Instagram Likes -->
+<div class="produk">
+  <div>
+    <h3 onclick="toggleHarga('igLikes')">Instagram Likes ⬇️</h3>
+    <div id="igLikes" class="harga-list">
+      <p>100 Likes : Rp8.000</p>
+      <p>200 Likes : Rp15.000</p>
+      <p>300 Likes : Rp22.000</p>
+      <p>500 Likes : Rp35.000</p>
+      <p>1000 Likes : Rp65.000</p>
+      <p>2000 Likes : Rp120.000</p>
+      <p>3000 Likes : Rp180.000</p>
+      <p>5000 Likes : Rp290.000</p>
+      <p>7000 Likes : Rp380.000</p>
+      <p>10000 Likes : Rp550.000</p>
+    </div>
+  </div>
+</div>
+
+<!-- Instagram Views -->
+<div class="produk">
+  <div>
+    <h3 onclick="toggleHarga('igViews')">Instagram Views ⬇️</h3>
+    <div id="igViews" class="harga-list">
+      <p>1000 Views : Rp5.000</p>
+      <p>2000 Views : Rp9.000</p>
+      <p>3000 Views : Rp13.000</p>
+      <p>5000 Views : Rp20.000</p>
+      <p>10.000 Views : Rp35.000</p>
+      <p>20.000 Views : Rp65.000</p>
+      <p>30.000 Views : Rp90.000</p>
+      <p>50.000 Views : Rp150.000</p>
+      <p>70.000 Views : Rp200.000</p>
+      <p>100.000 Views : Rp280.000</p>
+    </div>
+  </div>
+</div>
+
+<!-- =================== TIKTOK =================== -->
+
+<!-- TikTok Followers -->
+<div class="produk">
+  <div>
+    <h3 onclick="toggleHarga('ttFollowers')">TikTok Followers ⬇️</h3>
+    <div id="ttFollowers" class="harga-list">
+      <p>100 Followers : Rp12.000</p>
+      <p>200 Followers : Rp20.000</p>
+      <p>300 Followers : Rp28.000</p>
+      <p>500 Followers : Rp45.000</p>
+      <p>1000 Followers : Rp85.000</p>
+      <p>2000 Followers : Rp160.000</p>
+      <p>3000 Followers : Rp230.000</p>
+      <p>5000 Followers : Rp370.000</p>
+      <p>7000 Followers : Rp480.000</p>
+      <p>10000 Followers : Rp700.000</p>
+    </div>
+  </div>
+</div>
+
+<!-- TikTok Likes -->
+<div class="produk">
+  <div>
+    <h3 onclick="toggleHarga('ttLikes')">TikTok Likes ⬇️</h3>
+    <div id="ttLikes" class="harga-list">
+      <p>100 Likes : Rp9.000</p>
+      <p>200 Likes : Rp16.000</p>
+      <p>300 Likes : Rp23.000</p>
+      <p>500 Likes : Rp38.000</p>
+      <p>1000 Likes : Rp70.000</p>
+      <p>2000 Likes : Rp130.000</p>
+      <p>3000 Likes : Rp190.000</p>
+      <p>5000 Likes : Rp300.000</p>
+      <p>7000 Likes : Rp390.000</p>
+      <p>10000 Likes : Rp560.000</p>
+    </div>
+  </div>
+</div>
+
+<!-- TikTok Views -->
+<div class="produk">
+  <div>
+    <h3 onclick="toggleHarga('ttViews')">TikTok Views ⬇️</h3>
+    <div id="ttViews" class="harga-list">
+      <p>1000 Views : Rp6.000</p>
+      <p>2000 Views : Rp11.000</p>
+      <p>3000 Views : Rp15.000</p>
+      <p>5000 Views : Rp25.000</p>
+      <p>10.000 Views : Rp45.000</p>
+      <p>20.000 Views : Rp85.000</p>
+      <p>30.000 Views : Rp120.000</p>
+      <p>50.000 Views : Rp180.000</p>
+      <p>70.000 Views : Rp240.000</p>
+      <p>100.000 Views : Rp320.000</p>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+</body>
+</html>
+
+
+  <footer>
+    &copy; 2025 Toko Jajat | Semua Hak Dilindungi
+  </footer>
+  <script>
+function toggleHarga(id){
+  var elem = document.getElementById(id);
+  if(elem.style.display === "none"){
+    elem.style.display = "block";
+  } else {
+    elem.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
